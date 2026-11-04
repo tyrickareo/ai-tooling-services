@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>把 AI 工具装好、跑通、能验收</title>
+<meta name="description" content="帮独立开发者解决海外 AI 工具在中国网络与 Windows 环境下的安装、代理、登录态与交付问题。48 小时交付，附可复现命令与验收清单。">
+<meta property="og:title" content="把 AI 工具装好、跑通、能验收">
+<meta property="og:description" content="本地隔离安装 · 网络与登录态排障 · 自动化链路交付">
+<style>
+  :root { --bg:#0d1117; --panel:#161b22; --line:#30363d; --ink:#e6edf3; --muted:#9aa7b4; --accent:#58a6ff; }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    line-height:1.7; -webkit-font-smoothing:antialiased; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 22px; }
+  header { padding:72px 0 48px; border-bottom:1px solid var(--line); }
+  .eyebrow { color:var(--muted); font-size:13px; letter-spacing:.14em; margin:0 0 18px; }
+  h1 { font-size:clamp(30px,6vw,46px); line-height:1.25; margin:0 0 20px; letter-spacing:-.02em; }
+  .lede { font-size:17px; color:var(--muted); margin:0 0 28px; }
+  .cta { display:inline-block; padding:11px 22px; border:1px solid var(--accent); border-radius:8px; font-weight:600; }
+  section { padding:44px 0; border-bottom:1px solid var(--line); }
+  h2 { font-size:22px; margin:0 0 8px; }
+  .sub { color:var(--muted); font-size:14px; margin:0 0 24px; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:20px 22px; margin-bottom:14px; }
+  .card h3 { margin:0 0 8px; font-size:16px; }
+  .card p { margin:0; color:var(--muted); font-size:15px; }
+  table { width:100%; border-collapse:collapse; font-size:15px; }
+  th, td { text-align:left; padding:12px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { color:var(--muted); font-weight:500; font-size:13px; }
+  td:first-child { white-space:nowrap; font-weight:600; }
+  .note { margin-top:18px; padding:14px 16px; border-left:3px solid var(--accent); background:var(--panel);
+    color:var(--muted); font-size:14px; border-radius:0 8px 8px 0; }
+  ol { padding-left:20px; margin:0; }
+  ol li { margin-bottom:14px; color:var(--muted); font-size:15px; }
+  ol li strong { color:var(--ink); font-weight:600; }
+  ul { padding-left:20px; margin:0; color:var(--muted); font-size:15px; }
+  ul li { margin-bottom:8px; }
+  footer { padding:36px 0 64px; color:var(--muted); font-size:14px; }
+  @media (max-width:560px) {
+    header { padding:48px 0 32px; }
+    table { font-size:14px; }
+    th, td { padding:10px 6px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">独立开发 / 交付支持</p>
+  <h1>把 AI 工具装好、跑通、能验收。</h1>
+  <p class="lede">解决的是「装不上、连不上、突然不能用了、换个环境就崩」这一类问题。交付物是可复现的命令、回滚步骤和验收清单，不是一段建议。</p>
+  <a class="cta" href="https://x.com/ruuxinn">在 X 上私信我</a>
+</header>
+
+<section id="services">
+  <h2>能接的活</h2>
+  <p class="sub">范围写窄，是为了能说清楚什么叫做完。</p>
+  <div class="card">
+    <h3>项目级隔离安装</h3>
+    <p>把只提供全局安装的 CLI 工具改成装在项目目录里：独立虚拟环境、配置与缓存全部随项目走，不写全局、不需要管理员权限。</p>
+  </div>
+  <div class="card">
+    <h3>网络与登录态排障</h3>
+    <p>代理不生效、Cookie 丢失、headless 下登录态失效、请求被风控。定位到具体是哪一层，再给出可复现的修复。</p>
+  </div>
+  <div class="card">
+    <h3>自动化链路交付</h3>
+    <p>把重复的浏览器或命令行操作固化成可重跑脚本，附 60 秒录屏、回滚步骤和验收清单。</p>
+  </div>
+</section>
+
+<section id="terms">
+  <h2>报价与验收</h2>
+  <p class="sub">试运行报价，开工前写死交付边界。</p>
+  <table>
+    <thead><tr><th>档位</th><th>价格</th><th>周期</th><th>交付物</th></tr></thead>
+    <tbody>
+      <tr><td>试做</td><td>¥700</td><td>48 小时</td><td>1 个明确问题修好 + 仓库 + 录屏 + 验收清单</td></tr>
+      <tr><td>标准</td><td>¥1,800–2,500</td><td>5 天</td><td>需求拆解文档（验收项逐条列出）+ 实现 + 演示</td></tr>
+      <tr><td>维护</td><td>¥1,200/月</td><td>月付</td><td>24 小时响应 + 每月 2 次改动</td></tr>
+    </tbody>
+  </table>
+  <p class="note">30% 定金开工，验收不过退定金。验收标准在开工前写清：3 条可勾选的交付项、72 小时验收期。以上是报价，不是已成交记录。</p>
+</section>
+
+<section id="notes">
+  <h2>实测记录</h2>
+  <p class="sub">这套环境里实际跑通过的三条记录，不是客户案例。</p>
+  <ol>
+    <li><strong>本地隔离安装 Agent Reach 1.6.1</strong>：用独立 venv + HOME 重定向把配置、缓存、工具、浏览器数据全部留在项目目录；提供 cmd 与 sh 两个启动器，未写入全局。</li>
+    <li><strong>Windows 代理排障</strong>：requests/urllib 不读注册表代理，导致网页与 API 请求全部超时；启动器自动读取系统代理后恢复。</li>
+    <li><strong>opencli / X 双策略排障</strong>：读操作走 cookie + GraphQL 接口，写操作走页面 DOM 点击；headless 与独立浏览器 profile 分别造成登录态与搜索失效，切回日常浏览器会话后恢复。</li>
+  </ol>
+</section>
+
+<section id="free">
+  <h2>免费资源清单</h2>
+  <p class="sub">个人项目够用的官方免费额度，数字来自各家官方 limits / pricing 页。</p>
+  <ul>
+    <li><a href="https://developers.cloudflare.com/pages/platform/limits/">Cloudflare Pages</a>：500 次构建/月，单站 20,000 文件，100 个项目，带宽不限。</li>
+    <li><a href="https://developers.cloudflare.com/workers/platform/limits/">Cloudflare Workers</a>：10 万请求/天，5 个定时任务；单次 CPU 仅 10 ms，重计算交给外部 API。</li>
+    <li><a href="https://developers.cloudflare.com/workers-ai/platform/pricing/">Workers AI</a>：每天 10,000 Neurons，00:00 UTC 重置。</li>
+    <li><a href="https://supabase.com/pricing">Supabase Free</a>：500 MB 数据库、1 GB 存储、2 个活跃项目；闲置一周自动暂停。</li>
+  </ul>
+</section>
+
+<footer>
+  联系：<a href="https://x.com/ruuxinn">X @ruuxinn</a>。本站是静态页，无统计脚本、无 Cookie、无第三方资源。
+</footer>
+
+</div>
+</body>
+</html>
